@@ -23,7 +23,7 @@ class HistoryShopping extends Migration
             $table->string('history_shopping_credit');
             $table->integer('history_shopping_status')->unsigned();
 
-            $table->string('bills_id');
+            $table->integer('bills_id')->unsigned();
             $table->integer('providers_id')->unsigned();
             $table->integer('shopping_id')->unsigned();
 
