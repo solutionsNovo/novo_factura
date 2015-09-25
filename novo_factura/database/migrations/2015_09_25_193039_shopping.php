@@ -14,6 +14,7 @@ class Shopping extends Migration
     {
         Schema::create('shopping', function (Blueprint $table) {
             $table->increments('shopping_id');
+            $table->integer('shopping_status');
         });
     }
 

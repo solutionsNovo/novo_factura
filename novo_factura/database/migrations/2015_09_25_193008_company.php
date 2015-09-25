@@ -20,11 +20,9 @@ class Company extends Migration
             $table->string('company_vision');
             $table->string('company_mision');
             $table->string('company_description');
-            $table->string('email')->unique();
+            $table->string('company_email')->unique();
             $table->string('company_photo');
             $table->integer("company_status")->unsigned();
-            $table->rememberToken();
-            $table->timestamps();
         });
     }
 

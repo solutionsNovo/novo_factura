@@ -14,6 +14,12 @@ class Employees extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->increments('employees_id');
+            $table->string('employees_name');
+            $table->string('employees_lastname');
+            $table->string('employees_direction');
+            $table->string('employees_email');
+            $table->string('employees_phone');
+            $table->integer('employees_status');
         });
     }
 

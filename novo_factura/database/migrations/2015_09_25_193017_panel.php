@@ -16,8 +16,6 @@ class Panel extends Migration
             $table->increments('panel_id');
             $table->string('panel_name');
             $table->integer('panel_status')->unsigned();
-            $table->rememberToken();
-            $table->timestamps();
         });
     }
 

@@ -14,6 +14,7 @@ class Pay extends Migration
     {
         Schema::create('pay', function (Blueprint $table) {
             $table->increments('pay_id');
+            $table->string('pay_type');
         });
     }
 

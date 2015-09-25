@@ -14,6 +14,11 @@ class ListProducts extends Migration
     {
         Schema::create('list_products', function (Blueprint $table) {
             $table->increments('list_products_id');
+            $table->date('list_products_date');
+
+            $table->integer('products_id')->unsigned();
+
+            $table->foreign('products_id')->references('products_id')->on('products')->onDelete('cascade');
         });
     }
 

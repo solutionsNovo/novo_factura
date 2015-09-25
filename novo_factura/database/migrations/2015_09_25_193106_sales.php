@@ -14,6 +14,7 @@ class Sales extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->increments('sales_id');
+            $table->string('sales_business_name');
         });
     }
 

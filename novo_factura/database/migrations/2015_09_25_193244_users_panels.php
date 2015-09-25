@@ -14,6 +14,12 @@ class UsersPanels extends Migration
     {
         Schema::create('users_panels', function (Blueprint $table) {
             $table->increments('users_panels_id');
+
+            $table->integer('users_id')->unsigned();
+            $table->integer('panel_id')->unsigned();
+
+            $table->foreign('users_id')->references('users_id')->on('users')->onDelete('cascade');
+            $table->foreign('panel_id')->references('panel_id')->on('panel')->onDelete('cascade');
         });
     }
 

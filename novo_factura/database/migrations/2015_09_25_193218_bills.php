@@ -14,6 +14,8 @@ class Bills extends Migration
     {
         Schema::create('bills', function (Blueprint $table) {
             $table->increments('bills_id');
+            $table->integer('bills_number');
+            $table->String('bills_type');
         });
     }
 

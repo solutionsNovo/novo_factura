@@ -14,6 +14,12 @@ class CompanyEmployees extends Migration
     {
         Schema::create('company_employees', function (Blueprint $table) {
             $table->increments('company_employees_id');
+
+            $table->integer('company_id')->unsigned();
+            $table->integer('employees_id')->unsigned();
+
+            $table->foreign('company_id')->references('company_id')->on('company')->onDelete('cascade');
+            $table->foreign('employees_id')->references('employees_id')->on('employees')->onDelete('cascade');
         });
     }
 
